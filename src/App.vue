@@ -1,26 +1,49 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app" class="main_container">
+    <NFHead />
+    <router-view></router-view>
+<!--    <MainPage />-->
+
+  </div>
+
+
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+// import MainPage from './components/MainPage.vue'
+import NFHead from './components/NFHead.vue'
 
 export default {
   name: 'App',
+  methods: {
+
+  },
   components: {
-    HelloWorld
+    // MainPage,
+    NFHead
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  body {
+    margin: 0;
+  }
+  .main_container {
+    /*background-image: url("./assets/bg.png");*/
+
+  }
+  h2 {
+    font-family: 'Russo One', sans-serif!important;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 60px!important;
+    line-height: 72px;
+    color: #FFFFFF!important;
+  }
+  .nav-link:focus, .nav-link:hover {
+    color:#4BDF15;
+  }
+
 </style>
